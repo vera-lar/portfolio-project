@@ -1,81 +1,289 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <title>Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vera Lar | Portfolio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0d6efd;
+    padding: 1rem;
+}
+.navbar-brand {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.navbar-nav li a:hover {
+    color: #ffc107;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 20px 80px 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+.hero h1 {
+    font-weight: 700;
+    margin-top: 20px;
+}
+.hero h3 {
+    font-weight: 400;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.hero .para p {
+    margin-bottom: 15px;
+}
+
+/* Projects Section */
+.card-section {
+    padding: 60px 20px;
+    background: #e9ecef;
+}
+.card-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.card-section .card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease-in-out;
+}
+
+/* Skills Section */
+#skills {
+    padding: 60px 20px;
+    background: #f8f9fa;
+}
+#skills h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background: #e9ecef;
+}
+#contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+#contact button {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#contact button:hover {
+    background-color: #0b5ed7;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #212529;
+    color: #adb5bd;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 15px 40px 15px;
+    }
+    .card-section .card {
+        margin-bottom: 20px;
+    }
+    #skills .skill-bar h5 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero h3 {
+        font-size: 1.1rem;
+    }
+    .card-section h2, #skills h2, #contact h2 {
+        font-size: 1.5rem;
+    }
+    #contact input, #contact textarea {
+        padding: 10px;
+    }
+}
+</style>
 </head>
 <body>
 
-    <div class="main-div text-center">
-        <img src="images/building-valley-jpg.jpg" alt="Nice view picture" id="img" class="img-fluid">
-        <h1 class="name">Lar Telya Vongkur (Vera)</h1>
-        <h3 class="subtitle">Software Developer and Data Analyst</h3>
+<!-- Navbar -->
+<nav class="navbar sticky-top d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="#">Vera Lar</a>
+    <ul class="navbar-nav">
+        <li><a href="#hero">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-        <div class="para">
-            <p>I'm Vera, a student at the University of Jos, and also a passionate software developer and data analyst. I've built apps, analyzed data sets, and earned certifications like the Google Advanced Data Professional.</p>
-            <p>Now, I'm eager to take my skills to the next level through an internship or apprenticeship, where I can collaborate with experts, learn, and contribute to impactful projects.</p>
-            <p>Driven by my dream of joining a company that fosters innovation, I'm ready for the next challenge to shape my future.</p>
-        </div>
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <img src="images/building-valley-jpg.jpg" alt="Nice view" class="img-fluid rounded">
+    <h1>Lar Telya Vongkur (Vera)</h1>
+    <h3>Software Developer & Data Analyst</h3>
+    <div class="para">
+        <p>Hello! I'm Vera, a student at the University of Jos and a passionate software developer and data analyst. I enjoy building apps, analyzing data, and improving my skills every day.</p>
+        <p>I'm seeking an internship or apprenticeship where I can collaborate with experts, contribute to meaningful projects, and continue to grow professionally.</p>
     </div>
+</section>
 
-    <!-- First Section: Cards -->
-    <section class="card-section bg-light py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <!-- Card 1 -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="images/bed.PNG" class="card-img-top" alt="My little stuff">
-                        <div class="card-body">
-                            <h5 class="card-title">My Website</h5>
-                            <p class="card-text">An interactive website that showcases my skills in web development and data analysis.</p>
-                            <a href="#" class="btn btn-primary" onclick="showWelcomeMessage()">Take a look</a>
-                        </div>
+<!-- Projects Section -->
+<section id="projects" class="card-section">
+    <h2>My Projects</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/bed.PNG" class="card-img-top" alt="My Website">
+                    <div class="card-body">
+                        <h5 class="card-title">My Website</h5>
+                        <p class="card-text">An interactive platform showcasing my web development and data analysis skills.</p>
+                        <a href="#" class="btn btn-primary" onclick="showWelcomeMessage()">Take a look</a>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="images/coffee.jpg" class="card-img-top" alt="My LinkedIn profile">
-                        <div class="card-body">
-                            <h5 class="card-title">My LinkedIn</h5>
-                            <p class="card-text">Connect with me on LinkedIn to see my professional journey and network.</p>
-                            <a href="https://linkedin.com" class="btn btn-primary" onclick="showWelcomeMessage()">Go to LinkedIn</a>
-                        </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/coffee.jpg" class="card-img-top" alt="LinkedIn Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">LinkedIn</h5>
+                        <p class="card-text">Connect with me to follow my professional journey and network.</p>
+                        <a href="https://linkedin.com/in/vera-lar" target="_blank" class="btn btn-primary">Go to LinkedIn</a>
                     </div>
                 </div>
-                <!-- Card 3 -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="images/Screenshot 2024-10-05 045417.png" class="card-img-top" alt="Check my GitHub">
-                        <div class="card-body">
-                            <h5 class="card-title">My GitHub</h5>
-                            <p class="card-text">Explore my projects and code contributions on GitHub.</p>
-                            <a href="https://github.com" class="btn btn-primary" onclick="showWelcomeMessage()">Go to GitHub</a>
-                        </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/Screenshot 2024-10-05 045417.png" class="card-img-top" alt="GitHub Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">GitHub</h5>
+                        <p class="card-text">Explore my projects and code contributions on GitHub.</p>
+                        <a href="https://github.com/vera-lar" target="_blank" class="btn btn-primary">Go to GitHub</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Second Section: Image and Footer -->
-    <section class="image-section bg-dark text-white py-5 text-center">
-        <img src="images/women-jpg.jpg" class="img-fluid" alt="Nice view picture" id="img">
-        <footer>Copyright &copy; 2024 @ Vera Lar</footer>
-    </section>
+<!-- Skills Section -->
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 skill-bar">
+                <h5>Python</h5>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%">90%</div>
+                </div>
+            </div>
+            <div class="col-md-6 skill-bar">
+                <h5>Data Analysis</h5>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%">85%</div>
+                </div>
+            </div>
+            <div class="col-md-6 skill-bar">
+                <h5>Web Development</h5>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 80%">80%</div>
+                </div>
+            </div>
+            <div class="col-md-6 skill-bar">
+                <h5>SQL & Databases</h5>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%">75%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script>
-        function showWelcomeMessage() {
-            alert('Vera welcomes you, feel free to navigate around!');
-        }
-    </script>
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="container">
+        <form id="contactForm" method="POST" action="projectsubmit_form.php" class="mx-auto" style="max-width:600px;">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Footer -->
+<footer class="footer">
+    &copy; 2024 Vera Lar. All rights reserved.
+</footer>
+
+<script>
+function showWelcomeMessage() {
+    alert('Welcome! Feel free to explore my work.');
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
