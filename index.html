@@ -167,15 +167,23 @@ body {
 <body>
 
 <!-- Navbar -->
-<nav class="navbar sticky-top d-flex justify-content-between align-items-center">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container">
     <a class="navbar-brand" href="#">Vera Lar</a>
-    <ul class="navbar-nav">
-        <li><a href="#hero">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#hero">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
+
 
 <!-- Hero Section -->
 <section id="hero" class="hero">
@@ -189,42 +197,63 @@ body {
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="card-section">
-    <h2>My Projects</h2>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="images/bed.PNG" class="card-img-top" alt="My Website">
-                    <div class="card-body">
-                        <h5 class="card-title">My Website</h5>
-                        <p class="card-text">An interactive platform showcasing my web development and data analysis skills.</p>
-                        <a href="#" class="btn btn-primary" onclick="showWelcomeMessage()">Take a look</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="images/coffee.jpg" class="card-img-top" alt="LinkedIn Profile">
-                    <div class="card-body">
-                        <h5 class="card-title">LinkedIn</h5>
-                        <p class="card-text">Connect with me to follow my professional journey and network.</p>
-                        <a href="https://linkedin.com/in/vera-lar" target="_blank" class="btn btn-primary">Go to LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="images/Screenshot 2024-10-05 045417.png" class="card-img-top" alt="GitHub Profile">
-                    <div class="card-body">
-                        <h5 class="card-title">GitHub</h5>
-                        <p class="card-text">Explore my projects and code contributions on GitHub.</p>
-                        <a href="https://github.com/vera-lar" target="_blank" class="btn btn-primary">Go to GitHub</a>
-                    </div>
-                </div>
-            </div>
+<!-- Projects Section -->
+<section id="projects" class="card-section py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">My Projects</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="images/bed.PNG" class="card-img-top" alt="My Website">
+          <div class="card-body">
+            <h5 class="card-title">My Website</h5>
+            <p class="card-text">An interactive platform showcasing my web development and data analysis skills.</p>
+            <a href="https://vera-lar.github.io/portfolio-project/
+" target="_blank" class="btn btn-primary">Take a look</a>
+          </div>
         </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="🏠" class="card-img-top" alt="Flask Banking App">
+          <div class="card-body">
+            <h5 class="card-title">Flask Banking App</h5>
+            <p class="card-text">A web application for banking operations built using Flask and Python.</p>
+            <a href="https://flask-banking-app-1.onrender.com/" target="_blank" class="btn btn-primary">Take a look</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="images/coffee.jpg" class="card-img-top" alt="LinkedIn Profile">
+          <div class="card-body">
+            <h5 class="card-title">LinkedIn</h5>
+            <p class="card-text">Connect with me to follow my professional journey and network.</p>
+            <a href="https://linkedin.com/in/vera-lar" target="_blank" class="btn btn-primary">Go to LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="images/Screenshot 2024-10-05 045417.png" class="card-img-top" alt="GitHub Profile">
+          <div class="card-body">
+            <h5 class="card-title">GitHub</h5>
+            <p class="card-text">Explore my projects and code contributions on GitHub.</p>
+            <a href="https://github.com/vera-lar" target="_blank" class="btn btn-primary">Go to GitHub</a>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
 
 <!-- Skills Section -->
@@ -264,9 +293,12 @@ body {
 <section id="contact">
     <h2>Contact Me</h2>
     <div class="container">
+        
         <form id="contactForm" method="POST" action="projectsubmit_form.php" class="mx-auto" style="max-width:600px;">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
+           <li class="nav-item"><a href="https://www.gmail.com/user/larvera6@gmail.com">Email</a></li> <br>
+            <li class="nav-item"><a href="# ">Call me <strong>→</strong>wa.me/+2348131159835</a></li>
+            
+<br>
             <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
@@ -275,7 +307,7 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    &copy; 2024 Vera Lar. All rights reserved.
+    &copy; 2025 Vera Lar. All rights reserved.
 </footer>
 
 <script>
